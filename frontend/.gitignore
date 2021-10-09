@@ -7,7 +7,7 @@
 
 # testing
 /coverage
-
+generate-react-cli.json
 # production
 /build
 
