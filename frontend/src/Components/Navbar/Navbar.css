@@ -84,7 +84,7 @@ background: #f4f4f4;
   display: flex;
 }
 }
-@media (max-width:500px){
+@media(max-width: 500px){
   .navbar__logo h2{
     font-size: 1rem;
   }
