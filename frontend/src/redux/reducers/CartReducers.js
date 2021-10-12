@@ -2,7 +2,7 @@ import * as actionTypes from '../constants/CartConstants';
 
 // console.log(actionTypes);
 export const cartReducer = (state={cartItems:[]},action)=>{
-  console.log('reducer state--',state);
+  // console.log('reducer state--',state);
   switch (action.type) {
     case actionTypes.ADD_TO_CART:{
       const item=action.payload;

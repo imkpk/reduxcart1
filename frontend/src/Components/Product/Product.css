@@ -10,6 +10,7 @@
   justify-content: space-between;
   flex-direction: column;
 }
+
 .product > img {
   height: 170px;
   border-radius: 8px;
@@ -19,6 +20,7 @@
 }
 .info__price {
   font-weight: bold;
+  text-align: right;
 }
 .info__name {
   font-size: 1rem;

@@ -9,14 +9,13 @@ import Productscreen from "./Components/screens/Productscreen/Productscreen";
 import Sidebar from "./Components/Sidebar/Sidebar";
 
 function App() {
-
-const [sideToggle, setSideToggle] = useState(false)
+  const [sideToggle, setSideToggle] = useState(false);
 
   return (
     <Router>
-      <Navbar click={()=>setSideToggle(true)}/>
-      <Sidebar show={sideToggle}/>
-      <Backdrop show={sideToggle} click={()=>setSideToggle(false)}/>
+      <Navbar click={() => setSideToggle(true)} />
+      <Sidebar show={sideToggle} />
+      <Backdrop show={sideToggle} click={() => setSideToggle(false)} />
       {/* <h1> react redux shopping cart</h1> */}
       <main>
         <Switch>

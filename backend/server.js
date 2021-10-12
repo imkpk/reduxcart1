@@ -2,9 +2,11 @@ require("dotenv").config();
 const Router = require("./routes/productRoutes");
 const express = require("express");
 const connectDb = require("./config/db");
+const cors=require('cors')
 connectDb();
 
 const app = express();
+app.use(cors())
 app.use(express.json());
 
 app.use("/api/products", Router);
