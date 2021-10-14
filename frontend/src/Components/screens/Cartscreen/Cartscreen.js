@@ -10,7 +10,7 @@ const Cartscreen = () => {
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart);
   console.log("cart-screen---", cart);
-  const { cartItems } = cart;
+  const { cartItems, loading } = cart;
 
   // Quantity change function
   const qtyChnangeHandler = (id, qty) => {
@@ -27,8 +27,15 @@ const Cartscreen = () => {
   };
   //getCart SubTotal
   const getCartSubTotal = () => {
+    // if (!cartItems) {
+    //   return "Loading...";
+    // } else {
+    //   return cartItems
+    //     .reduce((price, item) => price + item.price * item.qty, 0)
+    //     .toFixed(2);
+    // }
     return cartItems
-      .reduce((price, item) => price + item.price * item.qty, 0)
+      .reduce((price, item, i, arr) => price + item.price * item.qty, 0)
       .toFixed(2);
   };
 

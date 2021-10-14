@@ -1,7 +1,7 @@
-import * as actionTypes from "../constants/ProductConstants";
-import axios from "axios";
-//product api 
-const apiUrl="http://localhost:5000/api/products";
+import * as actionTypes from '../constants/ProductConstants';
+import axios from 'axios';
+//product api
+const apiUrl = 'http://localhost:5000/api/products';
 export const getProducts = () => async (dispatch) => {
   try {
     dispatch({
@@ -9,7 +9,7 @@ export const getProducts = () => async (dispatch) => {
     });
     const { data } = await axios.get(apiUrl);
 
-    console.log('product actions---',data);
+    // console.log('product actions---',data);
     dispatch({
       type: actionTypes.GET_PRODUCTS_SUCCESS,
       payload: data,
@@ -47,8 +47,8 @@ export const getProductDetails = (id) => async (dispatch) => {
   }
 };
 
-export const removeProductDetails=()=>(dispatch)=>{
-dispatch({
-  type:actionTypes.GET_PRODUCT_DETAILS_RESET
-})
-}
+export const removeProductDetails = () => (dispatch) => {
+  dispatch({
+    type: actionTypes.GET_PRODUCT_DETAILS_RESET,
+  });
+};
